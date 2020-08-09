@@ -1,19 +1,127 @@
-baseurl = "/" # Controls base URL
-languageCode = "en-US" # Controls html lang attribute
-title = "Bulma for Hugo" # Homepage title and page title suffix
-paginate = 5 # Number of posts to show before paginating
-theme = "bulma" # to use as default theme
+################################### Default Configuration ############################
+baseurl = "http://demo.themefisher.com/vex-hugo/"
+title = "Vex | hugo landing page template"
+theme = "vex-hugo"
+# post excert
+summarylength = "20"
+# google analytics
+googleAnalytics = "" # Ex: UA-123-45
+# disable language
+disableLanguages = [] # desable language from here
 
-enableRobotsTXT = true # Suggested, it generates a robots.txt
-googleAnalytics = "" # Optional, add tracking Id for analytics
-disqusShortname = "" # Optional, add Disqus shortname for comments
-SectionPagesMenu = "main" # Enable menu system for lazy bloggers
+#################################### Plugins ##########################################
 
+# CSS Plugins
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700"
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themefisher-font/themefisher-font.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.min.css"
+[[params.plugins.css]]
+link = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js"
+
+
+###################################### Navigation ######################################
+
+# homepage section menu
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+# main menu
+[[menu.main]]
+name = "Products"
+URL = "products"
+weight = 2
+
+# main menu
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 4
+
+# footer menu
+[[menu.footer]]
+name = "Blog"
+URL = "blog"
+weight = 1
+
+[[menu.footer]]
+name = "Contact"
+URL = "contact"
+weight = 2
+
+[[menu.footer]]
+name = "Terms & Conditions"
+URL = "terms-conditions"
+weight = 3
+
+[[menu.footer]]
+name = "Privacy Policy"
+URL = "privacy-policy"
+weight = 4
+
+
+########################### Default parameters ##########################
 [params]
-  theme_variant = "" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
-  description = "A Simple Blog with Bulma" # Suggested, controls default description meta and landing page
-  powered_by = "love" # Optional, controls name display on footer
-  hide_author = false # Optional, set true to hide author name on posts
-  images = [] # Suggested, controls default OpenGraph images controls author name display on meta tag
-  github  = "github" # Optional, to display link to github account in menu bar
-  twitter = "twitter" # Optional, to display link to twitter account in menu bar
+logo = "images/logo.png"
+logo_width = "100px"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# currency
+currency = "$"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# snipcart public api key
+snipcart_api = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+# Subscription
+[params.subscription]
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+
+
+################################### French language #####################################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
