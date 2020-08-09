@@ -1,16 +1,36 @@
-name = "Educenter Hugo"
-license = "CC BY 3.0"
-licenselink = "https://creativecommons.org/licenses/by/3.0/"
-description = "Hugo port of the Themefisher’s Educenter theme"
-homepage = "https://gethugothemes.com/products/educenter-hugo/"
-tags = ["blog",'google-analytics', 'fast', 'modern', 'minimal', 'minimalistic', 'business', 'education', 'white', 'light', 'multilingual', "bootstrap", "company", "portfolio", "projects", "responsive", "themefisher"]
-features = ["blog", "company", "responsive", "seo-friendly"]
-min_version = "0.60.0"
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Bulma"
+license = "MIT"
+licenselink = "https://github.com/jeblister/bulma/master/LICENSE.md"
+description = "Bulma is a simple and a responsive Hugo theme that offers a traditional blog mixed with a landing page."
+homepage = "http://blog.elemnts.org/"
+tags = ["responsive", "bulma", "landing", "blog", "themes", "flexbox", "modern"]
+features = ["landing","Mobile-first Design",
+  "Responsive Design",
+  "Flexbox Layouts",
+  "Google Analytics",
+  "Disqus Commenting",
+  "OpenGraph support",
+  "Schema Structured Data",
+  "Paginated Lists",
+  "Reading Time",
+  "Last Modified time",
+  "Word Count",
+  "Related Posts",
+  "Section Menu",
+  "Block Templates",
+  "Table of Contents",
+  "SEO Site Verification"]
+min_version = 0.19
 
 [author]
-  name = "Themefisher"
-  homepage = "https://themefisher.com/"
+  name = "jeblister"
+  homepage = "http://findme.surge.sh/"
 
+# If porting an existing theme
 [original]
-  name = "Educenter"
-  homepage = "https://themefisher.com/products/education-template/"
+  name = "After Dark"
+  homepage = "https://after-dark.habd.as"
+  repo = "https://git.habd.as/comfusion/after-dark"

@@ -1,3 +1,12 @@
++++
+date = "2017-04-01T14:19:25+01:00"
+title = "bulma theme"
+draft = false
+menu = "main"
+weight = 3
++++
+
+
 # Bulma Theme for Hugo
 
 `Bulma` is a simple and a responsive Hugo theme that offers a traditional blog mixed with a landing page designed to bootstrap your frontend!.
@@ -28,7 +37,6 @@ To see this theme in action, check out my [blog](http://blog.elemnts.org) which 
 - SEO Site Verification : Site verification with Google, Bing Alexa and Yandex
 - Media lazy loading : Intelligent Lazyloading for images and iFrame embeds
 - Syntax Highlighting : Provide a richer experience when sharing code snippets on your post. 
-- Clipboard.js addons : copy any code text to the clipboard.
 - 404 page : 404 page with animated background
 
 ## Installation
@@ -48,19 +56,32 @@ Copy custom archetypes to your site:
 cp themes/bulma/archetypes/* archetypes
 ```
 
+Finally, include the settings in your site's `config.toml`:
 
-Next, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo. It serves as an example setup for your blog. 
+```toml
+baseurl = "https://blog.elemnts.org" # Controls base URL
+languageCode = "en-US" # Controls html lang attribute
+title = "bulma for Hugo Site" # Homepage title and page title suffix
+paginate = 5 # Number of posts to show before paginating
+theme = "bulma" # to use as default theme
 
-Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
+enableRobotsTXT = true # Suggested, it generates a robots.txt
+googleAnalytics = "" # Optional, add tracking Id for analytics
+disqusShortname = "" # Optional, add Disqus shortname for comments
+SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 
-Hugo includes a development server, so you can view your changes as you go :
-
-``` sh
-hugo server -w
+[params]
+  theme_variant = "" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
+  description = "" # Suggested, controls default description meta and landing page
+  powered_by = "" # Optional, controls name display on footer
+  hide_author = false # Optional, set true to hide author name on posts
+  images = [] # Suggested, controls default OpenGraph images
+  theme_variant = "" # Optional, for use to   author = "" # Optional, controls author name display on meta tag
+  github = "" # Optional, to display link to github account in menu bar
+  twitter = "" # Optional, to display link to twitter account in menu bar
 ```
 
-Now you can go to [localhost:1313](http://localhost:1313) and the `bulma`
-theme should be visible.
+That's it! Everything else is optional.
 
 
 ## Getting Started
@@ -242,18 +263,14 @@ There's only one rule...there are no rules.
 MIT
 
 ## Credit 
-- [bulma-templates](https://dansup.github.io/bulma-templates/)
-
-- [after dark](https://after-dark.habd.as) - base templates and core features
-
-- [lazysizes](https://github.com/aFarkas/lazysizes)
-
-- [bulmaswatch](https://jenil.github.io/bulmaswatch/) 
-
-- [images](https://images.unsplash.com)
+[bulma-templates]: https://dansup.github.io/bulma-templates/
+[after dark]: https://github.com/comfusion/after-dark
+[lazysizes]: https://github.com/aFarkas/lazysizes
+[bulmaswatch] : (https://jenil.github.io/bulmaswatch/) 
+[images] : https://images.unsplash.com
 
 ## Contact
 
 This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
 
-- [Mohamed JEBLI](http://about.elemnts.org/) [@jebli_7](http://twitter.com/jebli_7)
+- [Mohamed JEBLI](http://findme.surge.sh) [@jebli_7](http://twitter.com/jebli_7)
