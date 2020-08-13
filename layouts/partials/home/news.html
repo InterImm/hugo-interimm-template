@@ -1,0 +1,18 @@
+<!-- Hero content: this will be a banner -->
+</section>
+<div class="notification is-danger is-light has-text-centered">
+
+{{ $updates := $.Site.Data.updates }}
+
+{{ if $updates }}
+    {{ $updates_lang := index $updates .Page.Language.Lang }}
+    {{ if $updates_lang }}
+        {{ $recent := index $updates_lang 0}}
+        {{ $recent.date }}: {{ $recent.content | markdownify | emojify }}
+    {{ end }}
+
+{{ end }}
+
+</div>
+
+</section>

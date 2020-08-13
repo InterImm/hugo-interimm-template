@@ -1,0 +1,104 @@
+{{ define "title"}} {{ .Title }} {{ end }}
+
+{{ define "style"}}
+<link rel="stylesheet" href="/css/blog-post.css">
+<link rel="stylesheet" href="/css/code-highlighting/dark.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/assets/swiper/swiper.min.css">
+
+
+{{ end }}
+
+{{ define "header"}} {{ partial "menu" .}}
+
+{{ end }}
+
+{{ define "main" }}
+
+{{ $datapackage := index (index (index .Site.Data.projects ) .File.BaseFileName) "metadata" }}
+{{ $dpkgresource := index $datapackage "resources" }}
+
+
+
+<div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    {{ template "_internal/schema.html" . }}
+    <header class="post-header">
+
+        <div class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    {{ partial "breadcrumb" . }}
+                    <div class="container has-text-centered">
+                        {{ partial "profile/title" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+
+
+            <div class="columns">
+                <div class="column is-9">
+
+
+
+                    {{ range $dpkgresource}}
+
+                        {{ partial "profile/card" . }}
+
+                    {{ end }}
+
+
+                </div>
+
+                <div class="column is-3">
+
+
+                    <div class="box"
+                        style="box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);">
+                        <section class="section">
+                            {{ partial "profile/author" $datapackage }}
+                        </section>
+                    </div>
+                    <div class="is-divider" data-content="RELATED {{.Title | truncate 15}}"
+                        style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+                    </div>
+                    <div class="box"
+                        style="box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);">
+                        <section class="section">
+                            {{ partial "related" . }}
+                        </section>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+
+                    <div class="content blog-post section" itemprop="articleBody">
+                        {{ partial "toc" .}}
+                        {{.Content}}
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+{{ partial "nav-buttons.html" . }}
+
+{{ end }}
+
+{{ define "footer"}}
+{{ partial "footer.html" .}}
+
+
+{{ end }}

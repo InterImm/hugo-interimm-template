@@ -1,18 +1,36 @@
-# theme.toml for the Vex Hugo theme
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
 
-name = "Vex"
-license = "CC-BY-3.0"
-licenselink = "https://github.com/themefisher/vex-hugo/blob/master/LICENSE"
-description = "Vex by Themefisher ported to Hugo"
-homepage = "https://gethugothemes.com/products/vex-hugo-theme/"
-tags = ["onepage", "bootstrap", "ecommerce", "single product", "product", "themefisher"]
-features = ["onepage", "product"]
-min_version = "0.62.2"
+name = "InterImm"
+license = "MIT"
+licenselink = "https://github.com/InterImm/hugo-interimm-template/master/LICENSE.md"
+description = "Bulma is a simple and a responsive Hugo theme that offers a traditional blog mixed with a landing page."
+homepage = "http://interimm.org/"
+tags = ["responsive", "bulma", "landing", "blog", "themes", "flexbox", "modern"]
+features = ["landing","Mobile-first Design",
+  "Responsive Design",
+  "Flexbox Layouts",
+  "Google Analytics",
+  "Disqus Commenting",
+  "OpenGraph support",
+  "Schema Structured Data",
+  "Paginated Lists",
+  "Reading Time",
+  "Last Modified time",
+  "Word Count",
+  "Related Posts",
+  "Section Menu",
+  "Block Templates",
+  "Table of Contents",
+  "SEO Site Verification"]
+min_version = 0.19
 
 [author]
-  name = "Themefisher"
-  homepage = "https://themefisher.com/"
+  name = "LM"
+  homepage = "http://leima.is"
 
+# If porting an existing theme
 [original]
-  name = "Vex"
-  homepage = "https://themefisher.com/products/vex-bootstrap4-product-landing-page-website-template/"
+  name = "Bulma"
+  homepage = "https://themes.gohugo.io/theme/bulma/"
+  repo = "https://github.com/jeblister/bulma"

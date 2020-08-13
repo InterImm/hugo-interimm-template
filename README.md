@@ -1,116 +1,259 @@
-# Easy Setup (Hugo + Netlify + Forestry)
-Build your website with kross hugo theme by following this easy steps (No Coding Required)
+# Bulma Theme for Hugo
 
-<a href="http://bit.ly/meghna-hugo-installation" target="_blank" title="meghna hugo installation" rel="nofollow"><img width="100%" src="https://user-images.githubusercontent.com/37659754/70844354-4028be00-1e6a-11ea-8d84-02e9a25e7db8.png"></a>
+`Bulma` is a simple and a responsive Hugo theme that offers a traditional blog mixed with a landing page designed to bootstrap your frontend!.
 
-In this tutorial we will show you to make your website live without buying any hosting and touching a single line of code. We made this tutorial based on [meghna hugo](https://github.com/themefisher/meghna-hugo) but you can setup everithing like this.
+![bulma hugo landingPage](https://cldup.com/tV6cFj0UDo.png)
 
-### What you need !!
+# Demo
 
-1. Git acccount (Ex: Github, Gitlab etc ) . In our case we use github.
-2. [Netlify](https://bit.ly/netlify-account) account to host files and add custom domain .
-3. [Forestry](https://bit.ly/forestry-account) account to maintain whole project without code.
+To see this theme in action, check out my [blog](http://blog.elemnts.org) which is rendered with this theme and see it’s configuration on Github.
 
+## Features
 
-### Step 1 : Fork or Clone repository
-
-First we will fork this [vex hugo](https://github.com/themefisher/vex-hugo) template.
-
-### Step 2 : Add your repository in Forestry
-
-Go to your [forestry](https://bit.ly/forestry-account)  account and click on `import your site now`. declare your config.toml file [`exampleSite`] and fill up basic settings .
-
-**Or just click this button for one click installation** [![import to forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=themefisher/vex-hugo&engine=hugo&version=0.73.0&config=exampleSite)
-
-Now mark everything as done, then go to configuration to change the base url . You can put any url but this have to similar as netlify . So for now put a name which you are going to put in netlify as netlify subdomain.
-
-### Step 3 : Setup and host website with Netlify
-
-Here comes the last step . Go to your [netlify](https://bit.ly/netlify-account) account and click add new site . Choose your git repository to import your website in netlify .  And now you can see the forked `vex hugo` theme. select it and follow the steps. Then go to `site settings` for change the site name and put your subdoamin name here what you puted on forestry as base url. save it and go to `deploy` from top menu, Wait a while and click on `site preview` or just simply go to the subdomain you puted as base url. **BOOM! Your site is live.** Now you can go to forestry and add, remove or customize every setting and content.
-
-> If you face any issue regarding the installation feel free to onen [open a new issue](https://github.com/themefisher/vex-hugo/issues)
-
-## Table of Contents
-
-- [Demo](#demo)
-- [Installation](#installation)
-- [Main Features](#main-features)
-- [What's New](#what's-new)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions-(paid))
-- [Licensing](#licensing)
-- [More Hugo Themes](https://themefisher.com/hugo-themes/)
-
-## Demo
-
-| Homepage  | Blog  | Product  | Contact  |
-|---|---|---|---|
-| ![Homepage](https://user-images.githubusercontent.com/58769763/87217772-ba70e080-c36e-11ea-8b7d-a0cf98191e84.png) | ![Blog](https://user-images.githubusercontent.com/58769763/87217775-be046780-c36e-11ea-8e10-acb45e54beaa.png) | ![product](https://user-images.githubusercontent.com/58769763/87217776-bfce2b00-c36e-11ea-891a-6f3157c35311.png) | ![contact](https://user-images.githubusercontent.com/58769763/87217777-c197ee80-c36e-11ea-8bd4-8b513cdebe78.png) |
-
-[Live Demo](http://demo.themefisher.com/vex-hugo/).
-
-**The images are only for demonstration purpose, Please don't use those images.**
+- Mobile-first Design : Every element in Bulma is mobile-first and optmizes for vertical reading, so by default on mobile
+- Responsive Design : Optimized for mobile, tablet, desktop
+- Google Analytics : Google Analytics using the internal async template
+- Disqus Commenting : Post comments with Disqus using the internal template
+- OpenGraph support : SEO-optimized using OpenGraph
+- Schema Structured Data : Schema Structured Data and Meta tags
+- Paginated Lists : Simple list pagination with page indicators
+- Reading Time : Post reading time and update notice set user expectations
+- Last Modified time : 
+- Meta data for all article : Rich post data including links to category and tag taxonomy listings, author and word count
+- Related Posts : Related Content for increased page views and reader loyalty
+- Section Menu : Configurable Section Menu for global site navigation
+- Block Templates : Block Templates for foolproof layout extensions
+- Table of Contents : Accessible Table of Contents
+- Variants themes : Configurable theme
+- SEO Site Verification : Site verification with Google, Bing Alexa and Yandex
+- Media lazy loading : Intelligent Lazyloading for images and iFrame embeds
+- Syntax Highlighting : Provide a richer experience when sharing code snippets on your post. 
+- Clipboard.js addons : copy any code text to the clipboard.
+- 404 page : 404 page with animated background
 
 ## Installation
-At the top we have shown an easy hugo installation. but still if you think you want to go with the traditional way then use the following commands:
 
-**Note : You must use `hugo-extended` version to compile SCSS**
+Inside the folder of your Hugo site run:
+
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/jeblister/bulma.git
+
+For more information read the official [setup guide](//gohugo.io/overview/installing/) for Hugo.
+
+
+Copy custom archetypes to your site:
+
+```shell
+cp themes/bulma/archetypes/* archetypes
+```
+
+
+Next, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo. It serves as an example setup for your blog. 
+
+Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
+
+Hugo includes a development server, so you can view your changes as you go :
+
+``` sh
+hugo server -w
+```
+
+Now you can go to [localhost:1313](http://localhost:1313) and the `bulma`
+theme should be visible.
+
+
+## Getting Started
+
+There are a few concepts this theme employs to make a personal blog. It's important to read this as you may not see what you expect upon launching. Since this theme is built to be a personal blog it opts for some simplifications like using the ["Section Menu for the Lazy Blogger"](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) option in Hugo for displaying a simple menu. It assumes you want to call your blog posts `posts` and organizes them as such. For example, creating a new post with Hugo would require you typing:
 
 ```
-$ git clone git@github.com:themefisher/vex-hugo.git
-$ cd vex-hugo/exampleSite/
-$ hugo server --themesDir ../..
+  $ hugo new posts/my-new-post.md
+
 ```
 
+It also assumes you want to display links to your sections of content `posts`and display links to other pages in the menu and requires some setup on your part. This guide will take you through the steps to configure your blog to use the theme.
 
-## Main features
+### Configuring you website
 
-* Fully Responsive Ready.
-* Multilingual Support.
-* Powered by bootstrap 4 framework.
-* Product Showcase.
-* Product Details Page.
-* Snipcart Included.
-* Blog Post.
-* Contact Form.
-* Email Subscription Section.
-* Documented codes.
+#### Where should blog post markdown files be stored?
 
-## What's New
+The theme works with other content types, but posts work best when grouped under `posts`. When using the `posts` content type you'll have a customized list page sorted by year and the default list page. Here's an example:
 
-* Multilingual Support.
-* Product Details Page.
-* Snipcart Included.
-* Blog Post.
-* Contact Form.
+![Custom List Page](https://cldup.com/y61NIUWHTR.png)
 
-## Icons
 
-To view the catalog of available themefisher-font icons, visit https://themefisher.github.io/themefisher-font/
+#### How to configure the menu ?
 
-## Reporting Issues
+Theme uses [Section Menu for Lazy Bloggers](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) to produce global site navigation, if enabled.
 
-We use GitHub Issues as the official bug tracker for the Vex Template. Please Search [existing issues](https://github.com/themefisher/vex-hugo/issues). It’s possible someone has already reported the same problem.
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/vex-hugo/issues)
+Because of this you'll need to make one change to your `config.toml` file. Add **main** as the `SectionPagesMenu`.
 
-## Technical Support or Questions (Paid)
+```toml
+SectionPagesMenu = "main"
+```
 
-If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
+Your individual posts don't need to organize themselves into menu groupings. Everything is assumed to be grouped at the top level. One exception to this is if you want to add a custom page to the root of the menu. In this case you would want to add `menu: main` to your page's Front Matter.
 
-## Licensing
+You can then control the name and weight of these menus in your `config.toml` by adding a section for each menu item you'd like to display:
 
-This Theme is released under [Creative Commons Attribution 3.0 (CC-BY-3.0) License](https://creativecommons.org/licenses/by/3.0/)
-If you want to remove the credit simply make a [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GSG5G2YL3E5V4), so that we can run our contribution to hugo community.
+```toml
+[[menu.main]]
+  name = "Posts"
+  weight = 1
+	identifier = "posts"
+  url = "/posts/"
+```
 
-## Hire Us
-We are available for Hiring of your next HUGO project. Drop Us a mail [themefisher@gmail.com](mailto:themefisher@gmail.com)
+**Recommendation:** Add `SectionPagesMenu` to your `config.toml` file.  
+**Recommendation:** Don't set a `menu` in your post's Front Matter unless you want it to display on the navigation.  
+**Recommendation:** Configure the menu items by adding `menu.main` sections to your `config.toml` file.
 
-## Premium Themes
+#### Defining yourself as the Author
 
-| [![Mega-Bundle-HUGO](https://gethugothemes.com/wp-content/uploads/edd/2019/09/Mega-Bundle-HUGO.png)](https://themefisher.com/products/hugo-mega-bundle/) | [![Adrian](https://gethugothemes.com/wp-content/uploads/edd/2019/12/adrian-ecommerce-template.jpg)](https://gethugothemes.com/products/adrian/) | [![influencer](https://gethugothemes.com/wp-content/uploads/2019/11/Influencer.png)](https://gethugothemes.com/products/influencer-hugo/) |
-|:---:|:---:|:---:|
-| **Hugo Mega Bundle**  | **Adrian**  | **Influencer**  |
-| [![Agico](https://gethugothemes.com/wp-content/uploads/2019/06/Hugo-theme-agico.jpg)](https://gethugothemes.com/products/agico-hugo-theme/) | [![Biztrox](https://gethugothemes.com/wp-content/uploads/2019/12/Biztrox.png)](https://gethugothemes.com/products/hugo-business-theme/) | [![Bexer](https://gethugothemes.com/wp-content/uploads/2019/06/hugo-theme-bexer.jpg)](https://gethugothemes.com/products/bexer-hugo-theme/) |
-| **Agico** | **Biztrox** | **Bexer** |
-| [![Dtox](https://gethugothemes.com/wp-content/uploads/2019/06/hugo-theme-Dtox.jpg)](https://gethugothemes.com/products/dtox-hugo-theme/) | [![Hargo](https://gethugothemes.com/wp-content/uploads/edd/2019/10/Hargo.png)](https://gethugothemes.com/products/hargo/) | [![all](https://gethugothemes.com/wp-content/uploads/2019/12/get-more-hugo-themes.png)](https://gethugothemes.com/shop/) |
-| **Dtox** | **Hargo** | **More Hugo Themes** |
+In this case you would want to add `author = "your name"` variable like your name to your post's Front Matter.
+
+#### Intelligent Lazyloading
+
+Lazyloading prioritizes when and how images and more are downloaded, improving perceived performance and reducing page load times. When activated, lazyloading will start working automatically. No JavaScript configuration is necessary.
+
+**What makes it _Intelligent_?** If no lazyloaded content is detected on a page when the site is generated, the feature will not be activated and no additional downloads will occur.
+
+To activate lazyloading with [lazysizes], add `lazyload` to the `class` attribute of your images/iframes in conjunction with a `data-src` and/or `data-srcset` attribute:
+
+```html
+<!-- non-responsive -->
+<img data-src="image.jpg" class="lazyload">
+```
+
+```html
+<!-- responsive with automatic sizes calculation -->
+<img
+  data-sizes="auto"
+  data-src="image2.jpg"
+  data-srcset="image1.jpg 300w, image2.jpg 600w, image3.jpg 900w"
+  class="lazyload">
+```
+
+```html
+<!-- iframe example -->
+<iframe frameborder="0"
+  class="lazyload"
+  allowfullscreen
+  data-src="//www.youtube.com/embed/ZfV-aYdU4uE">
+</iframe>
+```
+
+Additional information and examples, including how to set-up and use LQIP (Low-Quality Image Placeholders), are available on the [lazysizes] repository on GitHub.
+
+#### Webmaster Verification
+
+Verify your site with several webmaster tools including Google, Bing, Alexa and Yandex. To allow verification of your site with any or all of these providers simply add the following to your `config.toml` and fill in their respective values:
+
+```toml
+[params.seo.webmaster_verifications]
+  google = "" # Optional, Google verification code
+  bing = "" # Optional, Bing verification code
+  alexa = "" # Optional, Alexa verification code
+  yandex = "" # Optional, Yandex verification code
+```
+
+### Index Blocking
+
+Just because a page appears in your `sitemap.xml` does not mean you want it to appear in a SERP. Examples of pages which will appear in your `sitemap.xml` that you typically do not want indexed by crawlers include error pages, search pages, legal pages, and pages that simply list summaries of other pages.
+
+Though it's possible to block search indexing from a `robots.txt` file, Bulma makes it possible to block page indexing using Hugo configuration as well. By default the following page types will be blocked:
+
+- Section Pages (e.g. Post listings)
+- Taxonomy Pages (e.g. Category and Tag listings)
+- Taxonomy Terms Pages (e.g. Pages listing taxonomies)
+
+To customize default blocking configure the `noindex_kinds` setting in the `[params]` section of your `config.toml`. For example, if you want to enable crawling for sections appearing in [Section Menu](#adding-a-section-menu) add the following to your configuration file:
+
+```
+[params]
+  noindex_kinds = [
+    "taxonomy",
+    "taxonomyTerm"
+  ]
+```
+
+To block individual pages from being indexed add `nofollow` to your page's front matter and set the value to `true`, like:
+
+```toml
+noindex = true
+```
+
+And, finally, if you're using Hugo `v0.18` or better, you can also add an `_index.md` file with the `noindex` front matter to control indexing for specific section list layouts:
+
+```shell
+├── content
+│   ├── modules
+│   │   ├── starry-night.md
+│   │   └── flying-toilets.md
+│   └── news
+│       ├── _index.md
+│       └── return-flying-toasters.md
+```
+
+To learn more about how crawlers use this feature read [block search indexing with meta tags](https://support.google.com/webmasters/answer/93710).
+
+### Custom CSS
+
+To add your own theme css or override existing CSS without having to change theme files do the following:
+
+1. Create a `style.css` in your site's `layouts/static/css directory` or use `custom.css` file in 'themes/bulma/static/css/custom.css`
+1. Add link to this file in 'themes/bulma/layouts/blog/single.html'.
+
+Default `style block` :
+
+```html
+{{ define "style"}}
+<link rel="stylesheet" href="{{ .Site.BaseURL}}/css/blog-post.css"> <!--base css for blog posts-->
+<link rel="stylesheet" href="{{ .Site.BaseURL}}/css/code-highlighting/dark.css"> <!--Provide a richer experience when sharing code snippets on your site. bulma provides support for code highlighting using the lovely `dark` or `light`themes used in [Atom](https://github.com/atom/atom).-->
+<link rel="stylesheet" href="{{ .Site.BaseURL}}/css/custom.css"> <!--Custom CSS-->
+{{ end }} 
+
+```
+
+### Theme Variants
+
+[`bulmaswatch`](https://jenil.github.io/bulmaswatch/) provides a few variants you may wish to use instead of the [bulma](http://bulma.io/)default theme.
+
+You can use the variant you like by updating the `theme_variant` setting in the site configuration like:
+```haml
+    theme_variant = "journal"
+
+```
+here all the variants, pick one :
+
+```
+cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti
+```
+
+## Contributing
+
+Did you find a bug or have an ideas for new features? Feel free to use the issue tracker to let me know or make a pull request.
+
+There's only one rule...there are no rules.
+
+## License
+
+MIT
+
+## Credit 
+- [bulma-templates](https://dansup.github.io/bulma-templates/)
+
+- [after dark](https://after-dark.habd.as) - base templates and core features
+
+- [lazysizes](https://github.com/aFarkas/lazysizes)
+
+- [bulmaswatch](https://jenil.github.io/bulmaswatch/) 
+
+- [images](https://images.unsplash.com)
+
+## Contact
+
+This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
+
+- [Mohamed JEBLI](http://about.elemnts.org/) [@jebli_7](http://twitter.com/jebli_7)

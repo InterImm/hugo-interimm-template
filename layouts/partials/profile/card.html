@@ -1,0 +1,86 @@
+<div class="box has-ribbon-left"
+    style="box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);">
+    <div class="ribbon is-small is-outlined is-white">
+        <span class="tag is-white">{{ index . "format" }} </span>
+    </div>
+    <article class="media">
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <h1 class="title is-3">{{ index . "name"}}</h1>
+                    {{ if (index . "description") }}
+                    <div><i class="fas fa-quote-left" style="margin-right: 0.5em;"></i>{{ index . "description" }}
+                    </div>
+                    {{ end }}
+                </p>
+
+                {{ if (index . "uris") }}
+
+                <div class="is-divider" data-content="Data"
+                        style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+                    </div>
+                    <p>
+                        {{ range $idx, $uri :=  (index . "uris") }}
+                            <div>
+                                <p>{{ index $uri "name" }}: </p>
+                                <p>
+                                    <code> {{ index $uri "uri" }} </code>
+                                </p>
+                            </div>
+                        {{ end }}
+                    </p>
+                {{ end }}
+
+
+                {{ $schema := (index . "schema")}}
+                {{ $fields := index $schema "fields"}}
+                {{ if $fields }}
+                <div class="is-divider" data-content="Fields"
+                    style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+                </div>
+                <section class="section">
+                    {{ range $idx, $field :=  $fields }}
+                        <div style="margin-bottom: 2em;">
+                            <p><i class="fas fa-cube" style="margin-right: 0.3em;"></i>
+                                {{ $field.name }} <span class="tag is-warning is-light">{{ $field.type }}</span>
+                            </p>
+                            {{ if index $field "description" }}
+                            <p style="margin-left: 2em;">
+                                <i class="fas fa-quote-left" style="margin-right: 0.5em;"></i> {{ index $field "description"}}
+                            </p>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </section>
+                {{ end }}
+
+                {{ $missingValues := index $schema "missingValues"}}
+                {{ if $missingValues }}
+                <div class="is-divider" data-content="Missing Values"
+                    style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+                </div>
+                <section class="section">
+                    {{ range $idx, $field :=  $fields }}
+                        <div style="margin-bottom: 2em;">
+                            <p><i class="fas fa-cube" style="margin-right: 0.3em;"></i>
+                                {{ $field.name }} <span class="tag is-warning is-light">{{ $field.type }}</span>
+                            </p>
+                            {{ if index $field "description" }}
+                            <p style="margin-left: 2em;">
+                                <i class="fas fa-quote-left" style="margin-right: 0.5em;"></i> {{ index $field "description"}}
+                            </p>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </section>
+                {{ end }}
+
+
+            </div>
+
+        </div>
+        <div class="media-right">
+
+        </div>
+    </article>
+</div>

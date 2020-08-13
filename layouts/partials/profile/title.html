@@ -1,0 +1,71 @@
+{{ $datapackage := index (index (index .Site.Data.projects ) .File.BaseFileName) "metadata" }}
+{{ $dpkgresource := index $datapackage "resources" }}
+
+<div class="box has-ribbon-left"
+  style="box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);">
+  <div class="ribbon is-small is-outlined is-white">
+    {{ range $dpkgresource }}
+    <span class="tag is-white">{{ index . "format" }} </span>
+    {{ end }}
+  </div>
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <h1 class="title is-3">{{ index $datapackage "profile"}}</h1>
+          {{ if (index $datapackage "description") }}
+          <div><i class="fas fa-quote-left" style="margin-right: 0.5em;"></i>{{ index $datapackage "description" }}
+          </div>
+
+          {{ end }}
+        </p>
+
+
+        {{ if (index $datapackage "keywords") }}
+        <h3 class="title is-4"><i class="fas fa-tags" style="margin-right: 0.5em;"></i>
+          {{ range $tag := (index $datapackage "keywords") }}
+          <span class="tag is-warning is-light">{{$tag}}</span>
+          {{ end }}
+        </h3>
+        {{ end }}
+
+        {{ if (index $datapackage "authors") }}
+        <h3 class="title is-4"><i class="fas fa-pencil-alt"
+            style="margin-right: 0.5em;"></i>{{range $aut := (index $datapackage "authors") }}
+            {{ if index $aut "link" }}
+            <a href="{{ $aut.link }}" class="tag is-info is-light">{{ $aut.name }}</a>
+            {{ else }}
+            <span class="tag is-info is-light">{{ $aut.name }}</span>
+            {{ end }}
+          {{ end }}</h3>
+        {{ end }}
+
+
+
+        {{ if (index $datapackage "references") }}
+        <div class="is-divider" data-content="References"
+          style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+        </div>
+        <section class="section">
+
+          {{ range $idx, $ref := (index $datapackage "references") }}
+
+          <p><i class="fas fa-certificate" style="margin-right: 0.3em;"></i>
+            {{ $ref.name }}
+            <a href="{{ $ref.link }}" class="is-info is-light is-small">
+              <i class="fas fa-link"></i>
+            </a>
+          </p>
+
+          {{ end }}
+
+        </section>
+        {{ end }}
+      </div>
+
+    </div>
+    <div class="media-right">
+
+    </div>
+  </article>
+</div>

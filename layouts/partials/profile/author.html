@@ -1,0 +1,33 @@
+<ul id="all-tags">
+    <li>
+        <p><i class="fas fa-at" style="margin-right: 0.3em;"></i> {{ if ne (index . "authors") true }}
+            {{ with index . "authors" }}
+            Contacts
+            <ul>
+                {{ range . }}
+                <li style="margin-left: 2em;">
+                    <span itemprop="author">{{ index . "name" }}</span>
+                </li>
+                {{ end }}
+            </ul>
+            {{ else }}
+            Unknown Contacts ...
+            {{ end }}
+            {{ end }}</p>
+    </li>
+    <li>
+        <p><i class="fas fa-pencil-alt" style="margin-right: 0.3em;"></i>
+            {{ if index . "updated"}}
+            Updated: {{ index . "updated" }}
+            {{ else if .PublishDate.IsZero }}
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+            {{ else if lt .PublishDate .Lastmod }}
+            Modified: <time
+                datetime="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+            {{ else }}
+            Published: <time
+                datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
+            {{ end }}</p>
+    </li>
+
+</ul>

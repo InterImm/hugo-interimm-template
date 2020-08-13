@@ -1,17 +1,11 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "menu" .}} {{end}}
+
 {{ define "main" }}
 
-  {{- partial "banner.html" . }}
-
-  {{- partial "features.html" . }}
-
-  {{- partial "promo.html" . }}
-
-  {{- partial "about-product.html" . }}
-
-  {{- partial "products.html" . }}
-
-  {{- partial "subscription.html" . }}
-
-  {{- partial "testimonials.html" . }}
+{{ partial "home/hero.html" . }}
+{{ partial "home/news.html" . }}
 
 {{ end }}
+
+{{ define "footer" }} {{ partial "footer" .}} {{ end }}
