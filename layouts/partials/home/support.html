@@ -1,0 +1,35 @@
+<!-- Hero content: this will be a banner -->
+{{ $cards := $.Site.Data.support }}
+{{ if $cards }}
+{{ $cards_lang := index $cards .Page.Language.Lang }}
+{{ if $cards_lang }}
+<section>
+    <div class="hero is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+
+                <h1 class="title is-2 is-spaced" style="text-transform: none;">
+                    {{ $cards_lang.title }}
+                </h1>
+                <div class="columns" style="padding-bottom: 2em;padding-top: 2em;">
+                    {{ range $cards_lang.list }}
+                    <div class="column">
+                        <div class="notification is-primary has-text-centered">
+                            <h3 class="subtitle has-text-centered">{{ .title }}</h3>
+                            <p>{{ .content | markdownify }}
+                            </p>
+                        </div>
+                    </div>
+                    {{ end }}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+{{ end }}
+{{ end }}

@@ -1,17 +1,31 @@
+{{ $footer := $.Site.Data.footer }}
+{{ if $footer }}
+{{ $footer_lang := index $footer .Page.Language.Lang }}
+{{ if $footer_lang }}
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
-            <p>
-                Created and maintained by <a href="{{ site.Params.baseurl }}">{{ site.Params.author }}</a>.
-                Acknowledgement: <a href="https://gohugo.io/">Hugo</a>,
-                <a href="https://bulma.io">Bulma</a>.
-                {{ if .Site.Params.powered_by }}
-                  <strong>{{.Site.Params.powered_by}}</strong>.
+            <div class="columns" style="padding-bottom: 2em;padding-top: 2em;">
+                {{ range $footer_lang }}
+                <div class="column">
+                    <h3 class="subtitle has-text-centered">{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                    <div class="tags is-centered">
+                        {{ range .list }}
+                        <a href="{{ .link }}" style="text-decoration: none;" class="tag">{{ .title }}</a>
+                        {{ end }}
+                    </div>
+                </div>
                 {{ end }}
-                <br>
+
+            </div>
+
+            <p>
                 <a class="tag" href="/index.xml">Feed</a>
                 <a class="tag" href="/data.json">JSON Data</a>
             </p>
         </div>
     </div>
 </footer>
+{{ end }}
+{{ end }}

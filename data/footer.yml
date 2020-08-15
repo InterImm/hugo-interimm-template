@@ -1,0 +1,93 @@
+cn:
+  - id: about
+    title: "关于"
+    description: "星际移民中心是星际移民局的核心机构，从事太阳系开发的各项研究，同时也为火星火星基地提供支持。"
+    list:
+      - title: PressKit
+        link: https://github.com/InterImm/service/releases
+      - title: 关于
+        link: /about
+  - id: connect
+    title: "发现我们"
+    list:
+      - title: GitHub
+        link: http://www.github.com/InterImm
+        status: contact
+      - title: admin@interimm.org
+        link: mailto:admin@interimm.org
+        status: contact
+      - title: 知乎专栏
+        link: http://zhuanlan.zhihu.com/interimm
+        status: highlight
+      - title: 微博 @星际移民中心
+        link: http://www.weibo.com/iiaofficial
+        status: contact
+      - title: 果壳@星际移民中心
+        link: http://www.guokr.com/group/i/1703723671/
+        status: stall
+      - title: 知乎@星际移民中心
+        link: http://www.zhihu.com/people/interimm
+        status: contact
+      - title: InterImm@Discord
+        link: https://discord.gg/pyfyR2X
+        status: contact
+      - title: Bilibili @ 星际移民中心
+        link: http://space.bilibili.com/6296332
+        status: highlight
+      - title: 优酷@星际移民中心
+        link: http://i.youku.com/u/UMTgxODE5ODc5Ng==?from=hz-4006606-1000631
+        status: stall
+      - title: 百度云 @ 星际移民中心
+        link: http://pan.baidu.com/s/1gdu21Ez
+        status: inuse
+  - id: network
+    title: "网络"
+    list:
+      - title: Exponential Deep Space
+        link: http://exponentialdeepspace.org
+      - title: Planetary University of Mars
+        link: http://planiversity.interimm.org
+en:
+  - id: connect
+    title: "网络"
+    list:
+      - title: GitHub
+        link: http://www.github.com/InterImm
+        status: contact
+      - title: admin@interimm.org
+        link: mailto:admin@interimm.org
+        status: contact
+      - title: 知乎专栏
+        link: http://zhuanlan.zhihu.com/interimm
+        status: highlight
+      - title: 微博 @星际移民中心
+        link: http://www.weibo.com/iiaofficial
+        status: contact
+      - title: 果壳@星际移民中心
+        link: http://www.guokr.com/group/i/1703723671/
+        status: stall
+      - title: 知乎@星际移民中心
+        link: http://www.zhihu.com/people/interimm
+        status: contact
+      - title: InterImm@Discord
+        link: https://discord.gg/pyfyR2X
+        status: social
+      - title: InterImm@Discord
+        link: https://discord.gg/pyfyR2X
+        status: contact
+      - title: Bilibili @ 星际移民中心
+        link: http://space.bilibili.com/6296332
+        status: highlight
+      - title: 优酷@星际移民中心
+        link: http://i.youku.com/u/UMTgxODE5ODc5Ng==?from=hz-4006606-1000631
+        status: stall
+      - title: 百度云 @ 星际移民中心
+        link: http://pan.baidu.com/s/1gdu21Ez
+        status: inuse
+  - id: network
+    title: "网络"
+    list:
+      - title: Exponential Deep Space
+        link: http://exponentialdeepspace.org
+      - title: Planetary University of Mars
+        link: http://planiversity.interimm.org

@@ -1,0 +1,21 @@
+<!-- Hero content: this will be a banner -->
+<section>
+<div class="notification is-dark is-light has-text-centered">
+
+{{ $topics := $.Site.Data.topics }}
+
+{{ if $topics }}
+    {{ $topics_lang := index $topics .Page.Language.Lang }}
+    {{ if $topics_lang }}
+        <div class="tags is-centered">
+        {{ range $topics_lang }}
+            <a href="{{ .link }}" style="text-decoration: none;" class="tag is-black is-rounded">{{ .topic | markdownify }}</a>
+        {{ end }}
+        </div>
+    {{ end }}
+
+{{ end }}
+
+</div>
+
+</section>
