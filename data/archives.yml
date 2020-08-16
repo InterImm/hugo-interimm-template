@@ -1,0 +1,142 @@
+cn:
+  title: "档案馆"
+  divider: "档案"
+  description: "火星档案馆是太阳系文明最重要的档案机构"
+  list:
+    - title: 星际移民之书
+      description: 人类建立太阳系文明的曲折历史以及所发展的科技
+      icon: fa fa-paragraph
+      button: 开始阅读
+      link: http://book.interimm.org/
+    - title: 系外行星文档
+      description: 系外行星的数据和特征，行星形成理论，以及系外生命
+      icon: fa fa-atlas
+      button: 开始阅读
+      link: http://exoplanets.interimm.org/
+    - title: 太空企业
+      description: 太空企业档案库，可以查看现有企业或者添加你的太空企业
+      icon: fa fa-trophy
+      button: 查看和添加
+      link: http://interimm.org/hub/
+    - title: 火星城市
+      description: 火星城市 3D 模型，以及各个火星城市的地图
+      icon: fa fa-city
+      button: 查看
+      link: http://interimm.org/cities
+    - title: 火星地图
+      description: 火星全球地图互动，包含火星城市和火星旅游景点
+      icon: fa fa-map-marked-alt
+      button: 使用地图
+      link: http://interimm.org/mars-map/
+    - title: 火星时刻
+      description: 火星时间和地球时间的在线转换工具
+      icon: fa fa-clock
+      button: 查看时间
+      link: http://interimm.org/mars-clock/
+    - title: 太阳系模型
+      description: 太阳系的 3D 模型，了解太阳系的点点滴滴
+      icon: far fa-circle
+      button: 查看
+      link: http://interimm.org/solarsystem/
+    - title: 恒星网络
+      description: 恒星际交通研究，建立恒星际交通网络
+      icon: fa fa-sun
+      button: 查看
+      link: http://stellar.interimm.org/
+    - title: 星际移民时间线
+      description: 人类太空文明的历史时间线
+      icon: fa fa-chart-bar
+      button: 查看
+      link: http://timeline.interimm.org/
+    - title: 太阳系通信延时
+      description: 实时计算太阳系内通信延时
+      icon: fas fa-satellite
+      button: 查看
+      link: http://interimm.org/comms-latency
+    - title: 星际飞行登机牌
+      description: 生成星际飞船登机牌
+      icon: fas fa-ticket-alt
+      button: 查看
+      link: http://interimm.org/boarding-pass
+    - title: 星际物流 API
+      description: 星际物流的计算平台
+      icon: fas fa-rocket
+      button: 查看
+      link: https://github.com/InterImm/interplanetary-logistics
+    - title: 人类火星探索地图
+      description: 人类探索火星的互动地图
+      icon: fa fa-map-marked-alt
+      button: 查看
+      link: http://interimm.org/mars-exploration-map/
+
+
+en:
+  title: "Archives"
+  divider: "Projects"
+  description: "The Mars Interplanetary Archives"
+  list:
+    - title: The Book of Interplanetary Civilization
+      description: A concise history of a cruel and inspiring era, with key events and technologies explained.
+      icon: fa fa-paragraph
+      button: Read Now
+      link: http://book.interimm.org/
+    - title: The Book of Exoplanets
+      description: Observation of exoplanets, statistical analysis of them, formation and evolution of planets, life on exoplanets
+      icon: fa fa-atlas
+      button: Read Now
+      link: http://exoplanets.interimm.org/
+    - title: Space Companies
+      description: List of space related companies with more to be added by you
+      icon: fa fa-trophy
+      button: Read and Add
+      link: http://interimm.org/hub/
+    - title: Cities on Mars
+      description: 3D models and 2D map of cities on Mars
+      icon: fa fa-city
+      button: View
+      link: http://interimm.org/cities
+    - title: Map of Mars
+      description: Interactive map of mars with cities and sites marked
+      icon: fa fa-map-marked-alt
+      button: Use the Map
+      link: http://interimm.org/mars-map/
+    - title: Timekeeping on Mars
+      description: A online tool to convert time on Earth to time on Mars
+      icon: fa fa-clock
+      button: View and Convert
+      link: http://interimm.org/mars-clock/
+    - title: Solar System
+      description: A 3D model of our solar system to investigate the whole system
+      icon: far fa-circle
+      button: Interact Now
+      link: http://interimm.org/solarsystem/
+    - title: Interstellar Transportation Network
+      description: Research on network for interstellar transportations.
+      icon: fa fa-sun
+      button: Read Now
+      link: http://stellar.interimm.org/
+    - title: Timeline of Events
+      description: A timeline tool for human space civilization
+      icon: fa fa-chart-bar
+      button: Interact Now
+      link: http://timeline.interimm.org/
+    - title: Communication in the Solar System
+      description: Calculate the communication lag in real time
+      icon: fas fa-satellite
+      button: Interact Now
+      link: http://interimm.org/comms-latency
+    - title: Interplanetary Travel Boarding Pass
+      description: Generate a boarding pass for your interplanetary space travel
+      icon: fas fa-ticket-alt
+      button: Interact Now
+      link: http://interimm.org/boarding-pass
+    - title: Interplanetary Logistics
+      description: Interplanetary Logsitics API for route, price, and safety.
+      icon: fas fa-rocket
+      button: Calculate Now
+      link: https://github.com/InterImm/interplanetary-logistics
+    - title: Mars Exploration Map
+      description: Interactive map of human exploration of Mars
+      icon: fa fa-map-marked-alt
+      button: Explore Now
+      link: http://interimm.org/mars-exploration-map/

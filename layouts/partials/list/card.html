@@ -1,36 +1,22 @@
 <div class="card">
     <div class="card-content">
         <div class="media">
-            <div class="media-content">
-                <a href="{{ .Permalink }}">
-                    <p class="title is-4">{{.Title}}</p>
+            <div class="media-content has-text-centered">
+                <p style="margin-bottom: 1em;"><i class="{{ .icon }} fa-5x" aria-hidden="true"></i></p>
+                <a href="{{ .link }}">
+                    <p class="title is-4">{{ .title }}</p>
                 </a>
             </div>
         </div>
 
         <div class="content">
-            <div class="is-divider" data-content="CATEGORIES"
+            <div class="is-divider"
                 style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
             </div>
-            <p>
-                <div class="tags">
-                    {{ range $cat := .Params.categories }}
-                    <a href="{{ "/categories/" | relLangURL }}{{ $cat | urlize }}"><span class="tag is-link is-light">{{$cat}}</span></a>
-                    {{ end }}
-                </div>
-            </p>
-            <div class="is-divider" data-content="DESCRIPTION"
-                style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
-            </div>
-            <p>{{ .Params.description }}</p>
-            <div class="is-divider" data-content="KEYWORDS"
-                style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
-            </div>
-            <div class="tags">
-                {{ range $tag := .Params.keywords }}
-                <a href="{{ "/keywords/" | relLangURL }}{{ $tag | urlize }}"><span class="tag is-warning is-light">{{$tag}}</span></a>
-                {{ end }}
-            </div>
+            <p>{{ .description }}</p>
+        </div>
+        <div class="content has-text-centered">
+            <a href="{{ .link }}" class="button is-primary is-outlined"> {{ .button }} </a>
         </div>
     </div>
 </div>

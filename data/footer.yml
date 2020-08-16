@@ -48,8 +48,16 @@ cn:
       - title: Planetary University of Mars
         link: http://planiversity.interimm.org
 en:
+  - id: about
+    title: "About"
+    description: "Interplanetary Immigration Center is the key member of Interplanetary Immigration Agency. We research and develop space related products and serve the society on Mars."
+    list:
+      - title: PressKit
+        link: https://github.com/InterImm/service/releases
+      - title: About
+        link: /about
   - id: connect
-    title: "网络"
+    title: "Social Media"
     list:
       - title: GitHub
         link: http://www.github.com/InterImm
@@ -57,16 +65,16 @@ en:
       - title: admin@interimm.org
         link: mailto:admin@interimm.org
         status: contact
-      - title: 知乎专栏
+      - title: Zhihu Blog
         link: http://zhuanlan.zhihu.com/interimm
         status: highlight
-      - title: 微博 @星际移民中心
+      - title: Weibo
         link: http://www.weibo.com/iiaofficial
         status: contact
-      - title: 果壳@星际移民中心
+      - title: Guokr
         link: http://www.guokr.com/group/i/1703723671/
         status: stall
-      - title: 知乎@星际移民中心
+      - title: Zhihu Profile
         link: http://www.zhihu.com/people/interimm
         status: contact
       - title: InterImm@Discord
@@ -78,14 +86,8 @@ en:
       - title: Bilibili @ 星际移民中心
         link: http://space.bilibili.com/6296332
         status: highlight
-      - title: 优酷@星际移民中心
-        link: http://i.youku.com/u/UMTgxODE5ODc5Ng==?from=hz-4006606-1000631
-        status: stall
-      - title: 百度云 @ 星际移民中心
-        link: http://pan.baidu.com/s/1gdu21Ez
-        status: inuse
   - id: network
-    title: "网络"
+    title: "Network"
     list:
       - title: Exponential Deep Space
         link: http://exponentialdeepspace.org
