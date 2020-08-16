@@ -60,13 +60,36 @@
 
       <div class="navbar-item">
         {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
+
+
+
+        {{ range .Site.Params.menu.topright }}
+        {{ if isset . "children" }}
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a href="{{ .url }}" class="navbar-link">
+            {{ .name }}
+          </a>
+          <div class="navbar-dropdown">
+            {{ range .children }}
+            <a href="{{ .url }}" class="navbar-item">
+              {{ .name }}
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ else }}
 
         <a itemprop="url"
-          class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
-          href="{{.URL}}"><span itemprop="name">{{ .Name }}</span></a>
+        class="navbar-item "
+        href="{{.url}}"><span itemprop="name">{{ .name }}</span></a>
 
         {{ end }}
+        {{ end }}
+
+
+
+
+
 
         {{ if .Site.Params.github}}
         <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
