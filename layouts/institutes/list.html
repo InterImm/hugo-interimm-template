@@ -1,0 +1,62 @@
+{{ define "header" }}
+{{ partial "menu" . }}
+
+{{ $archives := $.Site.Data.institutes }}
+{{ if $archives }}
+{{ $archives_lang := index $archives .Page.Language.Lang }}
+{{ if $archives_lang }}
+
+{{ partial "utils/hero.html" $archives_lang }}
+
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+{{ define "main" }}
+
+{{ $archives := $.Site.Data.institutes }}
+{{ if $archives }}
+{{ $archives_lang := index $archives .Page.Language.Lang }}
+{{ if $archives_lang }}
+
+
+<div class="is-divider" data-content="{{ $archives_lang.divider }}"
+    style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+</div>
+<main class="container" aria-label="Content">
+    {{ range index $archives_lang.list }}
+    <div class="columns">
+        <div class="column">
+            <article class="message is-info">
+                <div class="message-header">
+                  <p>
+                    {{ .title }}
+                  </p>
+                </div>
+                <div class="message-body">
+                  {{ .description }}
+                </div>
+                <figure class="image">
+                    <img src="{{.image}}" alt="{{ .title }}">
+                </figure>
+              </article>
+        </div>
+    </div>
+    {{ end }}
+
+    <div class="is-divider" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+
+
+</main>
+
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
