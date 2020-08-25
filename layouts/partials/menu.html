@@ -67,7 +67,7 @@
         {{ if isset . "children" }}
         <div class="navbar-item has-dropdown is-hoverable">
           <a href="{{ .url }}" class="navbar-link">
-            {{ .name }}
+            {{ if .icon }} <i class="{{.icon}}" aria-hidden="true"></i> {{end}} {{ .name }}
           </a>
           <div class="navbar-dropdown">
             {{ range .children }}
@@ -81,7 +81,7 @@
 
         <a itemprop="url"
         class="navbar-item "
-        href="{{.url}}"><span itemprop="name">{{ .name }}</span></a>
+        href="{{.url}}"><span itemprop="name">{{ if .icon }} <i class="{{.icon}}" aria-hidden="true"></i> {{end}} {{ .name }}</span></a>
 
         {{ end }}
         {{ end }}
