@@ -13,9 +13,8 @@
 
 
 {{ define "main" }}
-<div class="is-divider" data-content="TOOLS"
-                            style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
-                        </div>
+<div class="is-divider" data-content="" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+</div>
 <main class="container" aria-label="Content">
 
     <div class="columns is-multiline">
@@ -28,13 +27,7 @@
     </div>
     <div class="is-divider" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
 
-    <div class="container">
-        <div class="columns">
-            <div class="column" style="margin-bottom: 2em;padding-bottom:1em;">
-        {{ partial "pagination" . }}
-    </div>
-    </div>
-    </div>
+
 </main>
 {{ end }}
 {{ define "footer" }}
