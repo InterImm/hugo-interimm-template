@@ -1,0 +1,44 @@
+{{ define "header" }}
+{{ partial "menu" . }}
+
+{{ end }}
+
+
+{{ define "main" }}
+
+<style>
+  ::selection {
+    background: #000; /* WebKit/Blink Browsers */
+    color: #fff;
+  }
+  ::-moz-selection {
+    background: #000; /* Gecko Browsers */
+    color: #fff;
+  }
+</style>
+
+{{ partial "utils/banner.html" . }}
+
+<main class="main--content" aria-label="Content">
+  <div class="columns is-fullheight">
+      <div class="column">
+          <section class="hero is-default is-bold">
+              <div class="hero-body">
+                  <div class="content container">
+                     {{ .Content}}
+                  </div>
+                  <br>
+              </div>
+          </section>
+      </div>
+  </div>
+</main>
+
+
+{{ end }}
+
+
+
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
