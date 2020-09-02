@@ -1,0 +1,19 @@
+
+<aside class="menu column is-2 is-narrow-mobile is-fullheight" style="padding-left: 1em;padding-top:3em;">
+    <p class="menu-label">
+        {{ .title }}
+    </p>
+    <ul class="menu-list">
+        {{ range .toc }}
+        <li><a href="{{ .link }}"><i class="{{ .icon }}" aria-hidden="true"></i> {{ .title }}</a>
+            {{ if .toc }}
+                <ul>
+                    {{ range .toc }}
+                    <li><a href="{{ .link }}"><i class="{{ .icon }}" aria-hidden="true"></i> {{ .title }}</a></li>
+                    {{ end }}
+              </ul>
+            {{ end }}
+        </li>
+        {{ end }}
+    </ul>
+</aside>
