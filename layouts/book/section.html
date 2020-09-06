@@ -1,0 +1,45 @@
+{{ define "title" -}}
+{{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }}
+{{ partial "menu" . }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="columns">
+
+
+  <div class="column">
+
+    {{ partial "book/banner.html" . }}
+
+    <main class="main--content" aria-label="Content">
+      <section class="section">
+        <div class="container">
+          <div class="content is-medium">
+            {{ .Content}}
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  {{ $book := $.Site.Data.book }}
+  {{ if $book }}
+  {{ $book_lang := index $book .Page.Language.Lang }}
+  {{ if $book_lang }}
+
+  <!-- {{ partial "book/side-menu.html" $book_lang }} -->
+  {{ partial "book/side-toc.html" . }}
+
+  {{end}}
+  {{end}}
+
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
