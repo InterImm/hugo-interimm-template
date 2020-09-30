@@ -1,0 +1,65 @@
+{{ define "header" }}
+{{ partial "menu" . }}
+
+{{ $archives := $.Site.Data.cities }}
+{{ if $archives }}
+{{ $archives_lang := index $archives .Page.Language.Lang }}
+{{ if $archives_lang }}
+
+<div class="hero" style="margin-bottom:2em;">
+    <div class="hero-body">
+        <div class="container">
+            <div class="container has-text-centered">
+                <h1 class="title is-2 has-text-centered">{{ $archives_lang.title }}</h1>
+                <h2 class="subtitle">
+                    {{ $archives_lang.description }}
+                </h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{ end }}
+{{ end }}
+
+{{ end }}
+
+
+{{ define "main" }}
+
+{{ $archives := $.Site.Data.cities }}
+{{ if $archives }}
+{{ $archives_lang := index $archives .Page.Language.Lang }}
+{{ if $archives_lang }}
+
+<div class="is-divider" data-content="{{ $archives_lang.divider }}"
+    style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;">
+</div>
+<main class="container" aria-label="Content">
+    <div class="columns">
+        <div class="column">
+            <div class="columns is-multiline">
+                {{ range .Paginator.Pages }}
+                <div class="column is-one-third">
+                    {{ partial "list/page-card.html" .}}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <div class="is-divider" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+
+
+</main>
+
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
