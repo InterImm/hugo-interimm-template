@@ -1,0 +1,38 @@
+<!-- Hero content: will be in the middle -->
+</section>
+<div class="hero is-default">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 class="title is-2 is-spaced" style="text-transform: none;">
+                        {{ .Title }}
+                    </h1>
+
+                    <div>
+                        <p class="is-small">
+                            {{ .Description }}
+                        </p>
+                    </div>
+
+
+                    <div class="is-divider"
+                        style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+                    <h2 class="subtitle is-4" style="text-transform: none;">
+                        <div class="tags is-centered">
+                            {{ range .Params.tags }}
+                            <span class="tag is-primary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </h2>
+                    <div class="is-divider"
+                        style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>

@@ -10,7 +10,7 @@ cn:
   - id: connect
     title: "发现我们"
     list:
-      - title: GitHub
+      - title: InterImm@GitHub
         link: http://www.github.com/InterImm
         status: contact
       - title: admin@interimm.org
@@ -19,25 +19,25 @@ cn:
       - title: 知乎专栏
         link: http://zhuanlan.zhihu.com/interimm
         status: highlight
-      - title: 微博 @星际移民中心
+      - title: 星际移民中心@微博
         link: http://www.weibo.com/iiaofficial
         status: contact
-      - title: 果壳@星际移民中心
+      - title: 星际移民中心@果壳
         link: http://www.guokr.com/group/i/1703723671/
         status: stall
-      - title: 知乎@星际移民中心
+      - title: 星际移民中心@知乎
         link: http://www.zhihu.com/people/interimm
         status: contact
       - title: InterImm@Discord
         link: https://discord.gg/pyfyR2X
         status: contact
-      - title: Bilibili @ 星际移民中心
+      - title: 星际移民中心@Bilibili
         link: http://space.bilibili.com/6296332
         status: highlight
-      - title: 优酷@星际移民中心
+      - title: 星际移民中心@优酷
         link: http://i.youku.com/u/UMTgxODE5ODc5Ng==?from=hz-4006606-1000631
         status: stall
-      - title: 百度云 @ 星际移民中心
+      - title: 星际移民中心@百度云
         link: http://pan.baidu.com/s/1gdu21Ez
         status: inuse
   - id: network

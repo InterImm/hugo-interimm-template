@@ -1,0 +1,17 @@
+<aside class="menu column is-2 is-narrow-mobile is-fullheight" style="padding-left: 1em;padding-top:3em;">
+    <p class="menu-label">
+        <i class="fas fa-bookmark"></i> {{ .Title }}
+    </p>
+    {{ .TableOfContents }}
+
+    <div class="is-divider" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+    {{ $book := $.Site.Data.book }}
+    {{ if $book }}
+    {{ $book_lang := index $book .Page.Language.Lang }}
+    {{ if $book_lang }}
+    {{ partial "book/side-menu-bare.html" $book_lang }}
+    {{ end }}
+    {{ end }}
+
+</aside>
