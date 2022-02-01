@@ -1,0 +1,17 @@
+{{ $current_string := printf "/%s" .current | printf "%s" }}
+
+    <ul class="menu-list">
+        {{ range .book.toc }}
+            {{ if eq .link $current_string }}
+            <li><i class="{{ .icon }}" aria-hidden="true"></i> {{ .title }}
+                {{ if .toc }}
+                <ul>
+                    {{ range .toc }}
+                    <li><a href="{{ .link }}"><i class="{{ .icon }}" aria-hidden="true"></i> {{ .title }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </li>
+            {{ end}}
+        {{ end }}
+    </ul>

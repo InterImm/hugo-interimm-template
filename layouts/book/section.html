@@ -21,6 +21,16 @@
         <div class="container">
           <div class="content is-medium">
             {{ .Content}}
+
+            {{ $book := $.Site.Data.book }}
+            {{ if $book }}
+            {{ $book_lang := index $book .Page.Language.Lang }}
+            {{ if $book_lang }}
+            {{ partial "book/current-section-toc.html" . }}
+            {{end}}
+            {{end}}
+
+
           </div>
         </div>
       </section>
@@ -40,6 +50,7 @@
   {{end}}
 
 </div>
+{{ partial "book/feedback-button" . }}
 {{ end }}
 {{ define "footer" }}
 {{ partial "footer" . }}

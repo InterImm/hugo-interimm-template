@@ -1,0 +1,13 @@
+<aside class="menu column is-narrow-mobile is-fullheight" style="padding-left: 1em;padding-top:3em;">
+
+    {{ $current_section_file := .Section }}
+
+    {{ $book := $.Site.Data.book }}
+    {{ if $book }}
+    {{ $book_lang := index $book .Page.Language.Lang }}
+    {{ if $book_lang }}
+    {{ partial "book/current-section-toc-bare.html" (dict "book" $book_lang "current" $current_section_file) }}
+    {{ end }}
+    {{ end }}
+
+</aside>
