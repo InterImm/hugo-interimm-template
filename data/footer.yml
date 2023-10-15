@@ -47,6 +47,8 @@ cn:
         link: http://exponentialdeepspace.org
       - title: Planetary University of Mars
         link: http://planiversity.interimm.org
+      - title: 星辰通讯社
+        link: https://starspress.org/
 en:
   - id: about
     title: "About"
@@ -93,3 +95,5 @@ en:
         link: http://exponentialdeepspace.org
       - title: Planetary University of Mars
         link: http://planiversity.interimm.org
+      - title: STARS Press
+        link: https://starspress.org/
